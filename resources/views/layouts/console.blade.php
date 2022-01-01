@@ -50,24 +50,24 @@
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-bag"></i> Products</a>
                     <div class="dropdown-menu shadow border-0" aria-labelledby="dropdown01">
-<a class="dropdown-item" href="{{ route('console.categories.index') }}"><i class="fa fa-folder"></i> Categories</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-shopping-bag"></i> Data Products</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-award"></i> Voucher</a>
+                        <a class="dropdown-item" href="{{ route('console.categories.index') }}"><i class="fa fa-folder"></i> Categories</a>
+                        <a class="dropdown-item" href="{{ route('console.products.index') }}"><i class="fa fa-shopping-bag"></i> Data Products</a>
+                        <a class="dropdown-item" href="{{ route('console.vouchers.index') }}"><i class="fa fa-award"></i> Voucher</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-cart"></i> Orders</a>
                     <div class="dropdown-menu shadow border-0" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> Data Orders</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-credit-card"></i> Payment Confirmation</a>
+                    <a class="dropdown-item" href="{{ route('console.orders.index') }}"><i class="fa fa-shopping-cart"></i> Data Orders</a>
+<a class="dropdown-item" href="{{ route('console.payment.index') }}"><i class="fa fa-credit-card"></i> Payment Confirmation</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-laptop"></i> Sliders</a>
+                <a class="nav-link" href="{{ route('console.sliders.index') }}"><i class="fa fa-laptop"></i> Sliders</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-users"></i> Users</a>
+            <a class="nav-link" href="{{ route('console.users.index') }}"><i class="fa fa-users"></i> Users</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right" style="margin-right: 0px">
