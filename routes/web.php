@@ -26,3 +26,25 @@ Route::group(['middleware' => 'guest'], function(){
 
 
 });
+
+Route::prefix('console')->group(function () {
+
+    Route::group(['middleware' => 'auth'], function(){
+
+        //console dashboard
+        Route::livewire('/dashboard', 'console.dashboard.index')
+        ->layout('layouts.console')->name('console.dashboard.index');
+
+    });
+    //console categories
+Route::livewire('/categories', 'console.categories.index')
+->layout('layouts.console')->name('console.categories.index');
+
+Route::livewire('/categories/create', 'console.categories.create')
+->layout('layouts.console')->name('console.categories.create');
+
+Route::livewire('/categories/edit/{id}', 'console.categories.edit')
+->layout('layouts.console')->name('console.categories.edit');
+
+
+});
