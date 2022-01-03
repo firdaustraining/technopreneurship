@@ -16,7 +16,7 @@ class ApiController extends Controller
      *
      * @var string
      */
-    protected $API_KEY = '90f0c40f7c26ad91cb7cbdb64f05be74';
+    protected $API_KEY = '7895f449e21707ab49bd2e40947933d8';
 
     /**
      * getProvinces
@@ -39,6 +39,23 @@ class ApiController extends Controller
         ]);
     }
 
+        public function getProvincesName($id)
+    {
+        $invoice = Invoice::find($id);
+         $response = Http::withHeaders([
+                'key' => '7895f449e21707ab49bd2e40947933d8',
+            ])->get('https://api.rajaongkir.com/starter/province?id=',[
+            'province' => $invoice->province
+            ]);
+            $provinces = $response['rajaongkir']['results'];
+
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Get id',
+            'data'    => $provinces
+        ]);
+    }
     /**
      * getCities
      *
@@ -130,11 +147,10 @@ class ApiController extends Controller
             'phone'         => $request->phone,
             'province'      => $request->province,
             'city'          => $request->city,
-            'district'      => $request->district,
             'address'       => $request->address,
             'note'          => $request->note,
             'grand_total'   => $request->grand_total + rand(10,99),
-            'status'        => 'menunggu pembayaran'
+            'status'        => 'pending'
         ]);
 
         //insert product order

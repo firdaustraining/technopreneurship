@@ -6,7 +6,7 @@
                 @foreach ($sliders as $slider)
                 <div class="carousel-item {{ $active }}">
                     <a href="{{ $slider->link }}">
-                        <img src="{{ Storage::url('public/sliders/').$slider->image }}"
+                        <img src="{{ Storage::url('public/sliders/').$slider->image }}" width="3000" height="1000"
                             class="d-block w-100 rounded-lg">
                     </a>
                 </div>
@@ -62,6 +62,11 @@
                             {{ $product->title }}
                         </div>
                         <div class="satuan" style="color: #999">{{ $product->unit_weight }} {{ $product->unit }}</div>
+                        <div class="read" style="color: #152238">
+                            {!! $product->content !!}
+                        {{-- //    echo htmlspecialchars_decode($product->content); --}}
+                        </div>
+
 
 
                         @if ($product->discount > 0)
@@ -74,7 +79,7 @@
 
                         <div class="price font-weight-bold mt-3" style="color: #47b04b;font-size:20px">
                             {{ money_id($harga_diskon) }}</div>
-                        <button wire:click="addToCart({{ $product->id }})" class="btn btn-success btn-md mt-3 btn-block shadow-md">Beli</button>
+                        <button wire:click="addToCart({{ $product->id }})" class="btn btn-primary btn-md mt-3 btn-block shadow-md">Beli</button>
                     </div>
                 </div>
             </div>
@@ -87,3 +92,6 @@
         </div>
     </div>
 </div>
+<script>
+
+</script>

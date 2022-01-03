@@ -29,13 +29,14 @@
         body {
             font-family: 'Quicksand', sans-serif;
         }
+
     </style>
 </head>
 
 <body style="background-color: #e2e8f0;">
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #171d26!important">
-<a class="navbar-brand font-weight-bold" href="{{ route('console.dashboard.index') }}"><i class="fa fa-dog"></i> Modera</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #152238!important">
+<a class="navbar-brand font-weight-bold" href="{{ route('console.dashboard.index') }}"><img src="{{ asset('images/modera.png') }}" style="width: 50px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

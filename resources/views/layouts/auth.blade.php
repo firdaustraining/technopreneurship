@@ -34,7 +34,7 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="text-center mb-4">
-                    <img src="{{ asset('images/basket.png') }}" style="width: 100px;background-color: #fff;border-radius: 50%;padding: 8px;">
+                    <img src="{{ asset('images/modera.png') }}" style="width: 100px;background-color: rgb(0, 0, 0);border-radius: 50%;padding: 8px;">
                     <h3 class="font-weight-bold mt-2">Modera</h3>
                 </div>
                 @yield('content')

@@ -20,6 +20,20 @@ View::composer('*', function($view) {
     $global_categories = \App\Category::latest()->take(6)->get();
     $view->with('global_categories', $global_categories);
 });
+Route::get('/provinces', 'ApiController@getProvinces');
+Route::get('/provinces/{id}', 'ApiController@getProvincesName');
+
+Route::get('/cities', 'ApiController@getCities');
+Route::post('/shipping', 'ApiController@getShipping');
+Route::get('/check_voucher', 'ApiController@check_voucher');
+Route::post('/checkout', 'ApiController@checkout');
+Route::post('/waybill', 'ApiController@getWaybill');
+
+//cart
+Route::livewire('/cart', 'frontend.cart.index')
+->layout('layouts.frontend')->name('frontend.cart.index');
+
+
 Route::group(['middleware' => 'guest'], function(){
 
     //login page
@@ -128,3 +142,6 @@ Route::prefix('customer')->group(function () {
 
     });
 });
+//payment after success checkout
+Route::livewire('/payment/{invoice_id}', 'frontend.payment.index')
+->layout('layouts.frontend')->name('frontend.payment.index')->middleware('auth:customer');

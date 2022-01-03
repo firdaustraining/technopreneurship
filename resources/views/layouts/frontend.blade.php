@@ -29,22 +29,31 @@
         body {
             font-family: 'Quicksand', sans-serif;
         }
+        .navbar-dark .navbar-nav .nav-link {
+    color: rgb(255 255 255);
+        }
+    .btn-primary {
+    color: #fff;
+    background-color: #152238;
+    border-color: #152238;
+}
+
     </style>
 </head>
 
 <body style="background-color: #e2e8f0;">
 
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark text-white mb-5"
-        style="background-color: #171d26!important;">
-        <a href="/" class="navbar-brand font-weight-bold"><i class="fa fa-dog"></i> Modera</a>
+        style="background-color: #152238!important;">
+        <a href="/" class="navbar-brand font-weight-bold"><img src="{{ asset('images/modera.png') }}" style="width: 50px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-sk">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse" id="navbar-sk">
             <!-- categories -->
 <ul class="navbar-nav">
-    <li class="nav-item dropdown">
-        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup=“true" aria-expanded="false"><i class="fa fa-list-ul"></i> CATEGORIES
+    <li class="nav-item dropdown ">
+        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup=“true" aria-expanded="false" ><i class="fa fa-list-ul"></i> CATEGORIES
         </a>
         <div class="dropdown-menu border-0 shadow-sm dropdown-menu-right” aria-labelledby="navbarDropdownMenuLink">
            @foreach ($global_categories as $category)
@@ -72,13 +81,7 @@
 
                 <!-- cart -->
                 <div>
-                    <li class="nav-item ml-3 mr-3">
-                        <a href="" class="btn btn-md shadow btn-outline-dark btn-block" style="color: #333;background-color: #fff;border-color: #fff;"><i class="fa fa-shopping-cart"></i> 0 | 0</a>
-                    </li>
-                </div>
-                <!-- end cart -->
-
-                @if (Auth::guard('customer')->check())
+                     @if (Auth::guard('customer')->check())
                 <ul class="navbar-nav d-none d-md-block ml-4">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle font-weight-bold text-white" href="#" id="navbarDropdown"
@@ -92,6 +95,12 @@
                             <div class="dropdown-divider"></div>
                             <livewire:customer.auth.logout />
                         </div>
+
+                </div>
+                <!-- end cart -->
+
+                    <livewire:frontend.cart.header/>
+
                 </ul>
                 @else
                 <li class="nav-item">

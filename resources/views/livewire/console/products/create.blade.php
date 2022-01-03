@@ -199,9 +199,11 @@
         });
     });
 </script>
-<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<script src="//cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('content').on('change', function (e) {
+        removePlugins: 'htmlwriter'
         @this.set('content', e.editor.getData());
+
     });
 </script>

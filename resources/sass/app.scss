@@ -56,8 +56,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: rgb(253, 253, 253);
     font-size: 14px;
     font-weight: bold;
     position: absolute;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255 252 252);
 }

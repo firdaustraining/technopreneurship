@@ -58,18 +58,24 @@
                                 </td>
                                 <td>:</td>
                                 <td>
-                                    @php
+                                    {{-- @php
                                         $response = Http::withHeaders([
-                                            'accept' => 'application/json',
-                                            'authorization' => env('RUANGAPI_KEY'),
-                                            'content-type' => 'application/json',
-                                        ])->get('https://ruangapi.com/api/v1/cities',[
+                                        'key' => '7895f449e21707ab49bd2e40947933d8'
+                                        ])->get('https://api.rajaongkir.com/starter/province?id=',[
                                             'province' => $invoice->province
                                         ]);
 
-                                       echo $response['data']['province']['name'];
+                                       echo $response['rajaongkir']['result']['province'];
 
-                                    @endphp
+                                    @endphp --}}
+                                                                      @php
+                                $province_name = Http::withHeaders(['key' => '7895f449e21707ab49bd2e40947933d8'])
+                                ->get('https://api.rajaongkir.com/starter/province?id=' . $invoice->province)->json();
+                                // dd($province_name);
+                                $provinces = $province_name['rajaongkir']['results']['province'];
+                                echo ($provinces);
+
+@endphp
                                 </td>
                             </tr>
                             <tr>
@@ -92,6 +98,15 @@
 
                                     @endphp
                                 </td> --}}
+                            @php
+                            $city_name = Http::withHeaders(['key' => '7895f449e21707ab49bd2e40947933d8'])
+                            ->get('https://api.rajaongkir.com/starter/city?id=' . $invoice->city)->json();
+                            $city = $city_name['rajaongkir']['results']['city_name'];
+                           echo ($city);
+                            // dd($city);
+                            @endphp
+
+
                             </tr>
                             <tr>
                                 {{-- <td>
