@@ -15,6 +15,7 @@
                     <div class="card-body">
                         <h6 class="font-weight-bold"><i class="fa fa-tachometer-alt"></i> DASHBOARD</h6>
                         <hr>
+                        Selamat Datang di Modera Pet Shop, Modera Pet Shop yang beralamatkan di :
                     </div>
                 </div>
             </div>

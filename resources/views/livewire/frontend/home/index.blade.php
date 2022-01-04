@@ -6,7 +6,7 @@
                 @foreach ($sliders as $slider)
                 <div class="carousel-item {{ $active }}">
                     <a href="{{ $slider->link }}">
-                        <img src="{{ Storage::url('public/sliders/').$slider->image }}" width="3000" height="1000"
+                        <img src="{{ Storage::url('public/sliders/').$slider->image }}"
                             class="d-block w-100 rounded-lg">
                     </a>
                 </div>
