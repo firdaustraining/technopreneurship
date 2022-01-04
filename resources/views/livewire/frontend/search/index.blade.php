@@ -1,19 +1,6 @@
 <div class="mb-5">
     <div class="container-fluid" style="margin-top: 80px;">
 
-            <div class="jumbotron rounded-lg shadow" style="background-color: #566479;">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="card border-0 shadow rounded-full">
-                            <div class="card-body">
-                                <img src="{{ Storage::url('public/categories/'.$category_image) }}" style="width: 70px">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center text-white mt-3 font-weight-bold" style="font-size: 24px">{{ $category_name }}</div>
-                </div>
-            </div>
-
         <div class="row">
 
             @foreach ($products as $product)

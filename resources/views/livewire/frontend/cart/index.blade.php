@@ -163,7 +163,7 @@
                         <div class="form-group">
                             <label class="font-weight-bold">ALAMAT LENGKAP</label>
                             <textarea class="form-control" id="alamat" rows="3"
-                                placeholder="Alamat Lengkap&#10;&#10;Contoh: Perum. Griya Palem Indah, B-17 Jombang Jawa Timur 61419"></textarea>
+                                placeholder="Alamat Lengkap&#10;&#10;Contoh: Perumahan Tiara Ardi 5656 no 19"></textarea>
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold">CATATAN</label>

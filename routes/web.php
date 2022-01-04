@@ -145,3 +145,9 @@ Route::prefix('customer')->group(function () {
 //payment after success checkout
 Route::livewire('/payment/{invoice_id}', 'frontend.payment.index')
 ->layout('layouts.frontend')->name('frontend.payment.index')->middleware('auth:customer');
+//detail category
+Route::livewire('/category/{slug}', 'frontend.category.show')
+->layout('layouts.frontend')->name('frontend.category.show');
+Route::livewire('/search', 'frontend.search.index')
+->layout('layouts.frontend')->name('frontend.search.index');
+
